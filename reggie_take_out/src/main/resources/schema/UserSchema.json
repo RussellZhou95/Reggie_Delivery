@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+      "user": {
+          "description": "User who log in to the system",
+          "type": "array",
+          "properties": {
+              "id": {
+                 "type": "number"
+              },
+              "name": {
+                 "type": "string"
+              },
+              "phone":{
+                 "type": "string"
+              },
+              "sex":{
+                 "type": "string"
+              },
+              "idNumber":{
+                 "type": "string"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "status": {
+                "type": "number"
+              }
+          }
+      }
+  }
+
+}
