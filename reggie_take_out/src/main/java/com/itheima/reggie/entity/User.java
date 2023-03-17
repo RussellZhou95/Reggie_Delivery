@@ -1,5 +1,6 @@
 package com.itheima.reggie.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -7,10 +8,14 @@ import java.util.List;
 import java.io.Serializable;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.NoArgsConstructor;
+
 /**
  * 用户信息
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
