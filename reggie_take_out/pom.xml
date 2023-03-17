@@ -111,6 +111,34 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.4.5</version>
             </plugin>
+            <plugin>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>5.4.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <executions>
+                    <execution>
+                        <id>1</id>
+                        <configuration>
+                            <annotationStyle>jackson2</annotationStyle>
+                            <includeAdditionalProperties>false</includeAdditionalProperties>
+                            <sourcePaths>
+                                <sourcePath>${project.basedir}/src/main/resources/schema/UserSchema.json</sourcePath>
+                            </sourcePaths>
+                            <targetPackage>com.itheima.reggie.integrations.user.model.pojo</targetPackage>
+                            <useTitleAsClassname>true</useTitleAsClassname>
+                            <serializable>true</serializable>
+                        </configuration>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
